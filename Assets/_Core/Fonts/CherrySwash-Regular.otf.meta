@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: 0afb4b8ae4936cb44b731fc8abbafeb6
+timeCreated: 1483819247
+licenseType: Free
+TrueTypeFontImporter:
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Cherry Swash
+  fontNames:
+  - Cherry Swash
+  fallbackFontReferences: []
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
