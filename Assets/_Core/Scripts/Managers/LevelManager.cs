@@ -58,11 +58,19 @@ public class LevelManager : MonoBehaviour {
 
 	void Start()
 	{
-
+		/*
 		#if UNITY_EDITOR
 		if(Game.Initialized == 0)
 			LOLSDK.Init ("com.catrina.flowershop");
+		#endif*/
+
+		#if UNITY_EDITOR
+			ILOLSDK webGL = new LoLSDK.MockWebGL();
+		#elif UNITY_WEBGL
+			ILOLSDK webGL = new LoLSDK.WebGL();
 		#endif
+
+		LOLSDK.Init (webGL, "com.catrina.flowershop");
 		
 		//LOLSDK.Instance.DisplayPerformanceTestTool();
 

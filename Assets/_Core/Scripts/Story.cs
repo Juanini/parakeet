@@ -14,7 +14,13 @@ public class Story : MonoBehaviour {
 
 	void Start () 
 	{
-		LOLSDK.Init("com.catrinaproject.flowershop");
+		#if UNITY_EDITOR
+			ILOLSDK webGL = new LoLSDK.MockWebGL();
+		#elif UNITY_WEBGL
+			ILOLSDK webGL = new LoLSDK.WebGL();
+		#endif
+
+		LOLSDK.Init (webGL, "com.catrina.flowershop");
 		LOLSDK.Instance.ConfigureSound(0.6f, 0.4f, 0.4f);
 		SoundFX.Ins.PlayBackground(SoundFX.Ins.levelSelectMusic);
 
